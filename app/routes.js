@@ -36,12 +36,12 @@ export default function createRoutes(store) {
           navigationReducer,
           navigationSagas,
           linkListReducer,
-          linkListSaga
+          linkListSagas
         ]) => {
           injectReducer('navigationContainer', navigationReducer.default);
           injectSagas('navigationContainer', navigationSagas.default);
           injectReducer('linkListContainer', linkListReducer.default);
-          injectSagas('linkList', linkListSaga.default);
+          injectSagas('linkList', linkListSagas.default);
           renderRoute(component);
         });
 
